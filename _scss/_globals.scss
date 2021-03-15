@@ -17,15 +17,64 @@ h2, h3, .h2, .h3, p, .p, li {
     color: $color-primary;
 }
 
+
 a {
     text-decoration: none;
+    color: $color-link-primary;
 }
-
 
 li {
     list-style-type: none;
 }
 
-.text-uc{
-    text-transform: uppercase;
+.text-uc {text-transform: uppercase;}
+
+
+
+.section {
+    display:flex;
+    max-width:90vw;
+    margin:70px auto;
+    .col-title {width:33%;margin-right:1%}
+    .col-content {width:66%;}
+
+    .col-title .h2 {
+        font-size: 1.8em;
+        line-height: 1.2em;
+        text-transform: uppercase;
+    }
+    .col-content h2 {
+        font-size: 1.7em;
+        line-height: 1.2em;
+        margin-bottom:30px;
+    }
+}
+
+nav {
+    position: absolute;
+    top:40px;
+    left:0px;
+    width: 100%;
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        padding:12px 30px;
+        list-style-type: none;
+        text-align: center;
+    }
+    li a {
+        color: $color-light;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-primary;
+        }
+    }
 }

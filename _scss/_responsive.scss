@@ -1,0 +1,42 @@
+
+.welcome-message img {
+    max-width: 88%;
+}
+
+
+@include mq('tablet', max) {
+
+    .section {    
+        flex-direction: column;
+        .col-title {width:100%;margin-right:0%}
+        .col-content {width:100%;}
+    }
+
+    nav {
+        li {
+            padding:5px 5px;
+        }
+    }
+
+    .section .col-title .h2 { font-size: 1.5em; }
+    .section .col-content h2 { font-size: 1.2em; line-height: 1.1em;}
+    .section-tr .h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    .section-team .col-title, 
+    .section-ep .col-title {
+        text-align: left;
+    }
+
+    .welcome-message p br {display: none;}
+}
+
+
+@include mq('phablet', max) {
+    nav li {font-size: 0.9em;}    
+}
+
+@include mq('phone', max) {
+    nav li {font-size: 14px;}
+}
