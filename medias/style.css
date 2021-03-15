@@ -1,0 +1,97 @@
+html, body, div, ul {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px; }
+
+h2, .h2 {
+  margin: 0;
+  padding: 0px; }
+
+h2, h3, .h2, .h3, p, .p, li {
+  color: #41007D; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style-type: none; }
+
+.text-uc {
+  text-transform: uppercase; }
+
+.section {
+  display: flex;
+  max-width: 1600px;
+  margin: 70px auto; }
+  .section .col-title {
+    width: 30%;
+    margin-right: 3%; }
+  .section .col-content {
+    width: 67%; }
+  .section .col-title .h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.2em; }
+  .section .col-content h2 {
+    font-size: 2em;
+    line-height: 1.2em;
+    margin-bottom: 30px; }
+
+.section-hero {
+  max-width: 100%;
+  margin-top: 0px; }
+
+.section-hero {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  min-height: 110vh;
+  background-image: url("http://bouletap.ca//clients/donaldroyerdesign.com/bg-full.jpg");
+  background-size: cover;
+  background-position: bottom center; }
+  .section-hero nav {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 100%; }
+    .section-hero nav ul {
+      display: flex;
+      justify-content: center; }
+    .section-hero nav li {
+      padding: 12px 30px;
+      list-style-type: none; }
+    .section-hero nav li a {
+      color: #FFF;
+      text-transform: uppercase;
+      font-weight: 400; }
+      .section-hero nav li a:hover, .section-hero nav li a:focus, .section-hero nav li a:active {
+        color: #41007D; }
+  .section-hero .welcome-message {
+    text-align: center; }
+    .section-hero .welcome-message h1 .welcome {
+      display: inline-block;
+      width: 100%;
+      border-top: 0.5px solid #FFFFFFAA;
+      border-bottom: 0.5px solid #FFFFFFAA;
+      text-transform: uppercase;
+      font-size: 1.2em;
+      color: #FFF;
+      font-weight: 200;
+      text-align: center;
+      padding: 8px; }
+    .section-hero .welcome-message h1 .img {
+      display: none; }
+    .section-hero .welcome-message p {
+      color: #FFF; }
+
+.section-about h2 {
+  font-style: italic; }
+
+.section-tr .h3 {
+  font-size: 2em;
+  line-height: 1.2em;
+  margin-bottom: 25px; }

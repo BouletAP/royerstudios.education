@@ -12,3 +12,20 @@ h2, .h2 {
     margin:0;
     padding:0px;
 }
+
+h2, h3, .h2, .h3, p, .p, li {
+    color: $color-primary;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+.text-uc{
+    text-transform: uppercase;
+}
