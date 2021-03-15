@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Royer Studios Education</title>
+        <style>
+            body {
+                margin:0;
+                padding:0;
+                background-color:#131313;                
+            }
+            img {
+                max-width: 100%;
+                max-height:100%;
+                margin: 0px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="coming-soon" src="./images/home.jpg" alt="Cartoon image presenting the coming soon page of Royer Studios">
+    </body>
+    <script>
+        var resize_main_image = function () {
+            if( window.innerWidth < 768 )  {
+                document.querySelector('#coming-soon').src = "./images/home-mobile.jpg";
+            }
+            else {
+                document.querySelector('#coming-soon').src = "./images/home.jpg";
+            }
+        }
+        window.onload = resize_main_image;
+        window.onresize = function() {
+            setTimeout(resize_main_image, 200);
+        };
+    </script>
+</html>
