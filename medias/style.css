@@ -23,6 +23,9 @@ li {
 .text-uc {
   text-transform: uppercase; }
 
+.site-container {
+  overflow: hidden; }
+
 .section {
   display: flex;
   max-width: 90vw;
@@ -70,7 +73,7 @@ nav {
   align-items: center;
   justify-content: center;
   min-height: 90vh;
-  background-image: url("https://royerstudios.education/showcase-tmp-gh783d/medias/bg-full.jpg");
+  background-image: url("http://royerstudios.education/sc160321/medias/bg-full.jpg");
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat; }
@@ -140,23 +143,27 @@ nav {
   .welcome-message p br {
     display: none; }
   .section-hero {
-    background-image: url("http://bouletap.ca/clients/donaldroyerdesign.com/bg-tablet.jpg");
+    background-image: url("http://royerstudios.education/sc160321/medias/bg-tablet.jpg");
     background-size: cover;
     background-position: top left;
     min-height: 80vh;
     align-items: end; }
     .section-hero .welcome-message {
-      padding-top: 40px;
+      padding-top: 80px;
       padding-bottom: 10px; }
       .section-hero .welcome-message img {
         margin-bottom: 1em; } }
 
 @media only screen and (max-width: 559px) {
+  nav {
+    top: 15px; }
   nav li a {
     font-size: 16px;
     line-height: 16px; }
   .section-hero {
-    background-image: url("http://bouletap.ca/clients/donaldroyerdesign.com/bg-mobile.jpg"); } }
+    background-image: url("http://royerstudios.education/sc160321/medias/bg-mobile.jpg");
+    background-size: cover;
+    background-position: top left; } }
 
 @media only screen and (max-width: 399px) {
   nav li a {

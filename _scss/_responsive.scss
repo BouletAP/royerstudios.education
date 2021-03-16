@@ -37,7 +37,7 @@
         align-items: end;
 
         .welcome-message {      
-            padding-top:40px;  
+            padding-top:80px;  
             padding-bottom:10px;
 
             img {margin-bottom:1em;}
@@ -47,9 +47,14 @@
 
 
 @include mq('phablet', max) {     
+    nav {
+        top:15px;
+    }
     nav li a {font-size: 16px; line-height:16px;}    
     .section-hero {
         background-image: url('http://royerstudios.education/sc160321/medias/bg-mobile.jpg');
+        background-size: cover;
+        background-position: top left;
     }
 }
 
