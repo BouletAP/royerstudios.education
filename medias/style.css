@@ -3,7 +3,7 @@ html, body, div, ul {
   padding: 0; }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "myriad-pro", Helvetica, sans-serif;
   font-size: 22px; }
 
 h2, .h2 {
@@ -28,14 +28,15 @@ li {
   max-width: 90vw;
   margin: 70px auto; }
   .section .col-title {
-    width: 33%;
+    width: 23%;
     margin-right: 1%; }
   .section .col-content {
-    width: 66%; }
+    width: 76%; }
   .section .col-title .h2 {
     font-size: 1.8em;
     line-height: 1.2em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 600; }
   .section .col-content h2 {
     font-size: 1.7em;
     line-height: 1.2em;
@@ -66,13 +67,13 @@ nav {
   position: relative;
   align-items: center;
   justify-content: center;
-  min-height: 120vh;
-  background-image: url("http://bouletap.ca//clients/donaldroyerdesign.com/bg-full.jpg");
-  background-size: cover;
-  background-position: bottom center; }
+  min-height: 90vh;
+  background-image: url("https://royerstudios.education/showcase-tmp-gh783d/medias/bg-full.jpg");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat; }
   .section-hero .welcome-message {
-    text-align: center;
-    padding-bottom: 100px; }
+    text-align: center; }
     .section-hero .welcome-message h1 .welcome {
       display: inline-block;
       width: 100%;
@@ -127,7 +128,7 @@ nav {
     .section .col-content {
       width: 100%; }
   nav li {
-    padding: 5px 5px; }
+    padding: 6px 15px; }
   .section .col-title .h2 {
     font-size: 1.5em; }
   .section .col-content h2 {
@@ -140,12 +141,34 @@ nav {
   .section-ep .col-title {
     text-align: left; }
   .welcome-message p br {
-    display: none; } }
+    display: none; }
+  .section-hero {
+    background-image: url("http://bouletap.ca/clients/donaldroyerdesign.com/bg-mobile2.jpg");
+    background-size: cover;
+    background-position: top left;
+    min-height: 80vh;
+    align-items: end; }
+    .section-hero .welcome-message {
+      padding-top: 40px;
+      padding-bottom: 10px; }
+      .section-hero .welcome-message img {
+        margin-bottom: 1em; } }
 
 @media only screen and (max-width: 559px) {
-  nav li {
-    font-size: 0.9em; } }
+  nav li a {
+    font-size: 0.9em;
+    font-weight: 600; } }
 
 @media only screen and (max-width: 399px) {
   nav li {
     font-size: 14px; } }
+
+@media only screen and (min-width: 1248px) {
+  .section-hero {
+    background-image: url("https://royerstudios.education/showcase-tmp-gh783d/medias/bg-full.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    min-height: 120vh; }
+    .section-hero .welcome-message {
+      padding-bottom: 100px; } }

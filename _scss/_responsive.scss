@@ -4,6 +4,9 @@
 }
 
 
+
+
+
 @include mq('tablet', max) {
 
     .section {    
@@ -14,7 +17,7 @@
 
     nav {
         li {
-            padding:5px 5px;
+            padding:6px 15px;
         }
     }
 
@@ -30,13 +33,46 @@
     }
 
     .welcome-message p br {display: none;}
+
+    .section-hero {
+        background-image: url('http://bouletap.ca/clients/donaldroyerdesign.com/bg-mobile2.jpg');
+        background-size: cover;
+        background-position: top left;
+        min-height: 80vh;
+        align-items: end;
+
+        .welcome-message {      
+            padding-top:40px;  
+            padding-bottom:10px;
+
+            img {margin-bottom:1em;}
+        }
+    }
 }
 
 
 @include mq('phablet', max) {
-    nav li {font-size: 0.9em;}    
+    
+    
+    
+    nav li a {font-size: 0.9em;font-weight: 600;}    
 }
 
 @include mq('phone', max) {
     nav li {font-size: 14px;}
+}
+
+
+@include mq('desktop') {
+    .section-hero {
+        background-image: url('https://royerstudios.education/showcase-tmp-gh783d/medias/bg-full.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        min-height: 120vh;
+
+        .welcome-message {
+            padding-bottom:100px;
+        }
+    }
 }

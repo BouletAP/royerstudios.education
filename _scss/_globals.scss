@@ -4,7 +4,7 @@ html, body, div, ul {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "myriad-pro", Helvetica, sans-serif;
     font-size:22px;
 }
 
@@ -35,13 +35,14 @@ li {
     display:flex;
     max-width:90vw;
     margin:70px auto;
-    .col-title {width:33%;margin-right:1%}
-    .col-content {width:66%;}
+    .col-title {width:23%;margin-right:1%}
+    .col-content {width:76%;}
 
     .col-title .h2 {
         font-size: 1.8em;
         line-height: 1.2em;
         text-transform: uppercase;
+        font-weight: 600;
     }
     .col-content h2 {
         font-size: 1.7em;
