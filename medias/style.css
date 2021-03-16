@@ -74,7 +74,7 @@ nav {
   justify-content: center;
   min-height: 90vh;
   background-image: url("http://royerstudios.education/sc160321/medias/bg-full.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat; }
   .section-hero .welcome-message {
@@ -192,7 +192,7 @@ nav {
 
 @media only screen and (min-width: 1440px) {
   .section-hero {
-    background-image: url("https://royerstudios.education/showcase-tmp-gh783d/medias/bg-full.jpg");
+    background-image: url("http://royerstudios.education/sc160321/medias/bg-full.jpg");
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -212,3 +212,8 @@ nav {
     font-size: 1.7em;
     line-height: 1.2em;
     margin-bottom: 30px; } }
+
+@media (min-width: 768px) and (max-width: 1248px) {
+  .section-hero {
+    background-size: contain;
+    background-position: top left; } }
