@@ -35,8 +35,10 @@ li {
     display:flex;
     max-width:90vw;
     margin:70px auto;
-    .col-title {width:23%;margin-right:1%}
-    .col-content {width:76%;}
+
+    flex-direction: column;
+    .col-title {width:100%;margin-right:0%}
+    .col-content {width:100%;}
 
     .col-title .h2 {
         font-size: 1.8em;
@@ -70,7 +72,8 @@ nav {
     li a {
         color: $color-light;
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 600;
+        letter-spacing: 1.5px;
 
         &:hover,
         &:focus,
