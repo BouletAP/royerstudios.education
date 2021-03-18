@@ -112,6 +112,10 @@ nav {
   margin-bottom: 25px;
   font-style: italic; }
 
+.section-tr li {
+  text-indent: -2.2em;
+  padding-left: 2.2em; }
+
 .section-team .col-title,
 .section-ep .col-title {
   text-align: center; }
@@ -123,6 +127,11 @@ nav {
 
 .welcome-message img {
   max-width: 88%; }
+
+@media only screen and (max-width: 1247px) {
+  .min-desktop,
+  .br-min-desktop {
+    display: none; } }
 
 @media only screen and (max-width: 767px) {
   nav li {

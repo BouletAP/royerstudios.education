@@ -46,12 +46,18 @@
 .section li {margin-bottom:2px;}
 
 .section-about h2 {font-style: italic;font-weight: 300;margin-left:-2px;}
-.section-tr .h3 {
-    display: inline-block;
-    font-size: 1.6em;
-    line-height: 1.2em;
-    margin-bottom:25px;
-    font-style: italic;
+.section-tr {
+    .h3 {
+        display: inline-block;
+        font-size: 1.6em;
+        line-height: 1.2em;
+        margin-bottom:25px;
+        font-style: italic;
+    }
+    li {
+        text-indent: -2.2em;
+        padding-left:2.2em;
+    }
 }
 
 .section-team,

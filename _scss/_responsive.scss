@@ -4,7 +4,11 @@
 }
 
 
+@include mq('desktop', max) {
+    .min-desktop,
+    .br-min-desktop {display: none;}
 
+}
 
 
 @include mq('tablet', max) {

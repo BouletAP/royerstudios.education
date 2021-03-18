@@ -17,10 +17,10 @@ gulp.task('bs', function() {
     server: "./"
   });
 
-  gulp.watch("./_scss/*.scss", gulp.series('sass', 'minify-css', 'rename-minified'));
+  gulp.watch("./_scss/*.scss", gulp.series('sass', 'minify-css')); //, 'rename-minified'
 
   gulp.watch("./*.html").on('change', browserSync.reload);
-  gulp.watch("./style.min.css").on('change', browserSync.reload);
+  gulp.watch("./style.css").on('change', browserSync.reload);
 });
 
 gulp.task('minify-css', () => {
