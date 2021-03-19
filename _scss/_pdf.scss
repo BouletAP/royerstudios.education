@@ -1,0 +1,272 @@
+
+
+
+
+.page-pdf {
+
+    background-color: #000;
+    
+    color: #000;
+    p, li {
+        color: #000;
+    }
+    .text-primary {color:$color-primary;}
+    .text-black {color:$color-dark;}
+    ul.primary-light li {
+        color: $color-primary;
+        opacity: 0.8;
+    }
+
+    .site-container {
+        background-color: #FFF;
+        max-width:1248px;
+        margin:0px auto;
+
+        @include mq('desktop') {            
+            padding-left:50px;
+            padding-right:50px;
+        }
+    }
+
+
+    .logo-title {
+        vertical-align: middle;
+        display: inline-flex;
+        align-items: center;
+        font-size:1.1em;
+        margin-bottom:15px;
+    }
+    .logo-bg {
+        color:transparent;
+        overflow:hidden;
+        display:inline-block;
+        width:100px;
+        height:100px;
+        background-image: url('http://royerstudios.education/sc160321/medias/aytam/animate-your-tobacco-awareness-messages.png');
+        background-size: cover;
+        &.logo-left{margin-right:15px;}
+        &.logo-right{margin-left:15px;}
+    }
+
+
+    .bullet-red {
+        padding-left:20px;
+        li{position:relative;}
+        li::before {
+            position:absolute;
+            top:0;
+            left:-20px;
+            width:15px;
+            height:10px;
+            content: "•"; 
+            color: #D91580;
+            line-height: 18px;
+            font-size: 24px;
+        }
+
+        &.bullet-big {
+            li::before{
+                line-height: 16px;
+                font-size: 2em;
+            }
+        }
+        &.bullet-primary {
+            li::before {color: $color-primary}
+        }
+    }
+
+
+    .col-footer {
+        text-align: center;
+        img {width:75%;margin-top:20px;}
+    }
+
+    
+    .section-footer {
+        text-align: center;
+        input{
+            margin-top:-30px;
+            margin-bottom:50px;
+        }
+        h3 {font-size:1.4em;}
+        ul {
+            font-size:1.3em;
+            font-weight: bold;;
+        }
+    }
+
+    .prices {
+        border:4px solid $color-primary;
+        background-color: #41007D2A;
+        padding:12px 50px;
+        text-align: center;
+
+        h2, p {font-size:26px; font-weight: bold;margin:0px;}
+        p {font-size:1.4em;margin-top:8px;}
+        @media (max-width:1150px) {
+            h2, p {font-size: calc(16px + 6 * ((100vw - 320px) / 680));}
+            p {font-size:1.2;}
+            padding:12px 30px;
+        }
+        @media (max-width:688px) {
+            h2, p {font-size: calc(18px + 6 * ((100vw - 320px) / 680));}
+            padding:12px 15px;
+            p {font-weight: normal;}
+        }
+    }
+
+    .form-control {
+
+        margin-bottom:8px;
+        label {width:100%;}
+        input, textarea {width:100%;}
+
+        input, textarea {
+            background-color: #41007D2A;
+            border: 0px solid black;
+            border-bottom:1px;
+        }
+
+        input, textarea, label {
+            font-size:1.1em;
+            line-height: 1.5em;
+        }
+    }
+
+
+
+
+
+    @include mq('tablet', max) {     
+
+        font-size: 18px;
+        h2 {font-size:1.2em;line-height: 1.2em;margin-bottom:4px;}
+    
+    }
+    
+    @include mq('tablet') {       
+           
+        .textarea-control {padding-top:4.5em;}        
+
+        
+        .section {
+            .col-full {width:100%;}
+            .col-half {
+                width:50%;
+
+                &:nth-child(2) {
+                    width:48%;margin-left:2%;
+                }
+            }
+            .col-sidebar {width:40%;margin-left:8%;margin-right:2%;}
+        }
+
+
+        .col-sidebar {
+            position: relative;
+            padding: 5px 5px;
+            margin-top: 50px;
+
+            &::before,
+            &::after{
+            content: "";
+                position:absolute;
+                top:0px;
+                left:0px;       
+                //transition: transform 0.5s;
+            }
+        
+            &::before {
+                width: 110%;
+                height: 90vw;
+                border-left: 1px solid $color-gray;
+                border-right: 1px solid $color-gray;
+                transform: translate(-5%, -3%);        
+            }
+
+            &::after {
+                width: 120%;
+                height: 90%;
+                border-top: 1px solid $color-gray;
+                transform: translate(-15%, -1%) skew(-2deg);           
+            }
+        }
+    }
+}
+
+
+
+.btn-ctw {
+      
+    font-size:0.9em;
+    padding: 5px 20px;
+    margin-top: 1rem;
+    outline:0px;
+  
+    position: relative;
+    background: rgb(222,189,153);
+    background: linear-gradient(0deg, rgba(222,189,153,1) 0%, rgba(157,123,90,1) 100%);
+    color:#FFF;
+    text-transform:uppercase;
+    border: 1px solid #6A491A;
+    max-width:250px;
+    
+  
+  
+    &::before,
+    &::after{
+      content: "";
+      position:absolute;
+      top:0px;
+      left:0px;       
+      //transition: transform 0.5s;
+    }
+  
+    &::before {
+      width: 110%;
+      height: 160%;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      transform: translate(-5%, -15%);
+  
+    }
+    &::after {
+      width: 120%;
+      height: 130%;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      transform: translate(-8%, -10%) skew(10deg);   
+  
+    }
+  
+  
+    &:hover::after,
+    &:active::after,
+    &:focus::after {
+      transform: translate(-8%, -10%) skew(-10deg); 
+    }
+  }
+  
+  .btn-ctw.odd {
+    &::before {
+      width: 110%;
+      height: 160%;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      transform: translate(-5%, -15%);
+  
+    }
+    &::after {
+      width: 120%;
+      height: 130%;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      transform: translate(-8%, -10%) skew(-10deg);    
+    }
+  
+    &:hover::after,
+    &:active::after,
+    &:focus::after {
+      transform: translate(-8%, -10%) skew(10deg); 
+    }
+  }

@@ -8,7 +8,7 @@ body {
     font-size:22px;
 }
 
-h2, .h2 {
+h2, .h2, h4, .h4 {
     margin:0;
     padding:0px;
 }
@@ -29,6 +29,15 @@ li {
 
 .text-uc {text-transform: uppercase;}
 
+.mt0, .section.mt0 {margin-top:0em;}
+.mb0, .section.mb0 {margin-bottom:0em;}
+.mt05 {margin-top:0.5em;}
+.mt1 {margin-top:1em;}
+
+.img-responsive {
+    max-width: 100%;
+    margin:0 auto;
+}
 
 .site-container {overflow:hidden;}
 
@@ -36,6 +45,7 @@ li {
     display:flex;
     max-width:90vw;
     margin:70px auto;
+    &.section-first {margin-top:10px;}
 
     flex-direction: column;
     .col-title {width:100%;margin-right:0%}
