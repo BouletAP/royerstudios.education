@@ -6,11 +6,11 @@
 
         <title>Animate Your Tobacco Awareness Messages Remote Learning Workshop</title>
         <meta name="description" content="Serving schools nationwide with innovative media-arts based programs since 1990" />
-        <link rel="icon" type="image/png" href="http://royerstudios.education/sc160321/favicon.png">
+        <link rel="icon" type="image/png" href="./favicon.png">
         
         <meta property="og:title" content="Royer Studios Education">
         <meta property="og:description" content="Serving schools with innovative medias-arts based programs since 1990">
-        <meta property="og:image" content="http://royerstudios.education/medias/social-hd-royerstudios-education.png">
+        <meta property="og:image" content="./medias/social-hd-royerstudios-education.png">
         <meta property="og:url" content="http://royerstudios.education/">
         <meta name="twitter:card" content="Serving schools with innovative medias-arts based programs since 1990">
 
@@ -25,7 +25,7 @@
             <section class="section section-first">
                 <div class="col col-half">
                     <div class="col-header">
-                        <img class="img-responsive img-half-hd" src="http://royerstudios.education/sc160321/medias/aytam/animate-your-tobacco-awareness-messages.png" alt="">
+                        <img class="img-responsive img-half-hd" src="./medias/aytam/animate-your-tobacco-awareness-messages.png" alt="">
                         <p class="text-primary">Animate Your Tobacco Awareness Workshop Remote Learning Workshop (AYTAM RLW) is facilitated virtually by a professional teaching artist. Student write tobacco-use and vaping prevention scripts (prior to beginning the workshop), complete storyboards, create artwork for five scenes of animation, and record their voice-over narration resulting in one broadcast-quality TUPE PSA per team of eight students. The suggested allotted time to complete this workshop is a total of four hours (4 x 1 hour, 2 x 2 hours, or a 4-hour block).</p>
                     </div>
                     <div>
@@ -49,19 +49,19 @@
                 </div>
                 <div class="col col-sidebar">
                     <div class="img">
-                        <img class="img-responsive" src="http://royerstudios.education/sc160321/medias/aytam/sidebar-1.jpg" alt="">
+                        <img class="img-responsive" src="./medias/aytam/sidebar-1.jpg" alt="">
+                    </div>
+                    <div class="img mobile-hide">
+                        <img class="img-responsive" src="./medias/aytam/sidebar-2.jpg" alt="">
+                    </div>
+                    <div class="img mobile-hide">
+                        <img class="img-responsive" src="./medias/aytam/sidebar-3.jpg" alt="">
                     </div>
                     <div class="img">
-                        <img class="img-responsive" src="http://royerstudios.education/sc160321/medias/aytam/sidebar-2.jpg" alt="">
-                    </div>
-                    <div class="img">
-                        <img class="img-responsive" src="http://royerstudios.education/sc160321/medias/aytam/sidebar-3.jpg" alt="">
-                    </div>
-                    <div class="img">
-                        <img class="img-responsive" src="http://royerstudios.education/sc160321/medias/aytam/sidebar-4.jpg" alt="">
+                        <img class="img-responsive" src="./medias/aytam/sidebar-4.jpg" alt="">
                     </div>
                     <div class="col-footer">
-                        <img class="img-responsive"  src="http://royerstudios.education/sc160321/medias/aytam/royerstudios.JPG" alt="">
+                        <img class="img-responsive"  src="./medias/aytam/royerstudios.JPG" alt="">
                         <h4>Serving teachers and students nationwide since 1990!</h4>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
 
             <section class="section">
                 <div class="col col-half">
-                    <img class="img-responsive" src="http://royerstudios.education/sc160321/medias/aytam/animate-your-tobacco-awareness-messages.png" alt="">
+                    <img class="img-responsive" src="./medias/aytam/animate-your-tobacco-awareness-messages.png" alt="">
                     <h2 class="text-black">Royer Studios provides:</h2>
                     <ul class="bullet-red mt05">
                         <li>teaching artists to virtually facilitate up to four classes of 36 students.</li>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="form-control">
                             <label for="email">Email:</label>
-                            <input type="text" name="email" />
+                            <input type="email" name="email" />
                         </div>
 
                     </form>
@@ -140,18 +140,87 @@
                     </div>
                 </div>
             </section>
-
+            
             <section class="section section-footer mt0">
                 <div class="col col-full">
-                    <input type="button" class="btn-ctw" value="Submit Form">
+                    <div class="form-field alert-message" id="success-message">
+                        <p>Thank you, your message is sent!</p>
+                     </div>
+                     <div class="form-field alert-message" id="error-message">
+                        <p>Sorry, an error occured. Please try again.</p>
+                        <p>Details: <span id="error-details"></span></p>
+                     </div>
+                    <input type="button" class="btn-submit" id="btn-submit" value="Submit Form" onclick="sendForm()" />
                     <h3>RoyerStudios.Education</h3>
                     <ul>
                         <li>T - 310.455.7120</li>
                         <li>info@royerstudios.com</li>
+                        <li><a href="./medias/AYTAM.pdf" target="_blank">Download the brochure (PDF)</a></li>
                     </ul>
                 </div>
             </section>
         </div>
 
+
+        <script type="text/javascript">
+
+      
+            function confirmMessage() {         
+               document.getElementById('success-message').classList.add('show');
+               document.getElementById('btn-submit').classList.add('hidden');  
+            }
+      
+            function errorMessage(msg) {         
+               document.getElementById('error-message').classList.add('show');
+               document.getElementById('error-details').innerHTML = msg;         
+               setTimeout(function() {
+                  document.getElementById('error-message').classList.remove('show');
+                  document.getElementById('error-details').innerHTML = "";        
+               }, 7500);      
+            }
+      
+      
+            function sendForm() {
+               
+               var data = {
+                  "contact-name" : document.querySelector('input[name="contact-name"]').value,
+                  "position" : document.querySelector('input[name="position"]').value,
+                  "school-district" : document.querySelector('input[name="school-district"]').value,
+                  "email" : document.querySelector('input[name="email"]').value,
+                  "telephone" : document.querySelector('input[name="telephone"]').value,
+                  "comments" : document.querySelector('textarea[name="comments"]').value
+               }
+               
+               var urldata = encodeURIComponent(JSON.stringify(data));
+      
+               var xhr = new XMLHttpRequest();
+               xhr.open('POST', 'form-submit.php?formdata='+urldata);
+               xhr.send(null);
+      
+               xhr.onreadystatechange = function () {
+                  var DONE = 4; // readyState 4 means the request is done.
+                  var OK = 200; // status 200 is a successful return.
+                  if (xhr.readyState === DONE) {
+                     if (xhr.status === OK) {
+      
+                        var raw = xhr.responseText;
+                        var response = JSON.parse(raw);
+      
+                        if( response.num == "400") {
+                           confirmMessage();
+                        }
+                        else {
+                           errorMessage(response.text);
+                        }
+                     } else {
+                        console.log('Error: ' + xhr.status); // An error occurred during the request.
+                     }
+                  }
+               };
+               return false;
+            }
+      
+            
+         </script>
     </body>
 </html>

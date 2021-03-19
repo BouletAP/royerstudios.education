@@ -92,7 +92,7 @@ nav {
   align-items: center;
   justify-content: center;
   min-height: 90vh;
-  background-image: url("http://royerstudios.education/sc160321/medias/bg-full.jpg");
+  background-image: url("./medias/bg-full.jpg");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat; }
@@ -176,7 +176,7 @@ nav {
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-image: url("http://royerstudios.education/sc160321/medias/aytam/animate-your-tobacco-awareness-messages.png");
+    background-image: url("./medias/aytam/animate-your-tobacco-awareness-messages.png");
     background-size: cover; }
     .page-pdf .logo-bg.logo-left {
       margin-right: 15px; }
@@ -251,17 +251,22 @@ nav {
     .page-pdf .form-control input, .page-pdf .form-control textarea {
       background-color: #41007D2A;
       border: 0px solid black;
-      border-bottom: 1px; }
+      border-bottom: 1px;
+      padding: 5px; }
     .page-pdf .form-control input, .page-pdf .form-control textarea, .page-pdf .form-control label {
-      font-size: 1.1em;
+      font-size: 1em;
       line-height: 1.5em; }
+    .page-pdf .form-control label {
+      font-size: 1.1em; }
   @media only screen and (max-width: 767px) {
     .page-pdf {
       font-size: 18px; }
       .page-pdf h2 {
         font-size: 1.2em;
         line-height: 1.2em;
-        margin-bottom: 4px; } }
+        margin-bottom: 4px; }
+      .page-pdf .mobile-hide {
+        display: none; } }
   @media only screen and (min-width: 768px) {
     .page-pdf .textarea-control {
       padding-top: 4.5em; }
@@ -297,37 +302,21 @@ nav {
         border-top: 1px solid #888;
         transform: translate(-15%, -1%) skew(-2deg); } }
 
-.btn-ctw {
+.btn-submit {
   font-size: 0.9em;
   padding: 5px 20px;
   margin-top: 1rem;
   outline: 0px;
   position: relative;
-  background: #debd99;
-  background: linear-gradient(0deg, #debd99 0%, #9d7b5a 100%);
+  background: #41007D;
+  background: linear-gradient(0deg, #41007D 0%, #41007D 100%);
   color: #FFF;
   text-transform: uppercase;
-  border: 1px solid #6A491A;
+  border: 1px solid #41007D;
   max-width: 250px; }
-  .btn-ctw::before, .btn-ctw::after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px; }
-  .btn-ctw::before {
-    width: 110%;
-    height: 160%;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    transform: translate(-5%, -15%); }
-  .btn-ctw::after {
-    width: 120%;
-    height: 130%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    transform: translate(-8%, -10%) skew(10deg); }
-  .btn-ctw:hover::after, .btn-ctw:active::after, .btn-ctw:focus::after {
-    transform: translate(-8%, -10%) skew(-10deg); }
+  .btn-submit:hover, .btn-submit:active, .btn-submit:focus {
+    opacity: 0.8;
+    cursor: pointer; }
 
 .btn-ctw.odd::before {
   width: 110%;
@@ -345,6 +334,44 @@ nav {
 
 .btn-ctw.odd:hover::after, .btn-ctw.odd:active::after, .btn-ctw.odd:focus::after {
   transform: translate(-8%, -10%) skew(10deg); }
+
+.hidden {
+  display: none; }
+
+.alert-message {
+  display: none;
+  font-size: 2vw;
+  text-transform: uppercase;
+  margin-bottom: 15px; }
+
+.alert-message p:nth-child(2) {
+  text-transform: none;
+  font-weight: bold; }
+
+.alert-message #error-details {
+  font-weight: normal;
+  text-transform: none;
+  color: #093139; }
+
+.alert-message.show {
+  display: block;
+  padding: 12px 20px;
+  border: 1px solid #4F5A28;
+  animation: fadeIn ease 1s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+#success-message {
+  background-color: #88AC2B55;
+  color: #4F5A28; }
+
+#error-message {
+  background-color: #AF020033;
+  color: #A30500; }
 
 .welcome-message img {
   max-width: 88%; }
@@ -373,7 +400,7 @@ nav {
   .welcome-message p br {
     display: none; }
   .section-hero {
-    background-image: url("http://royerstudios.education/sc160321/medias/bg-tablet.jpg");
+    background-image: url("./medias/bg-tablet.jpg");
     background-size: cover;
     background-position: top left;
     min-height: 80vh;
@@ -391,7 +418,7 @@ nav {
     font-size: 16px;
     line-height: 16px; }
   .section-hero {
-    background-image: url("http://royerstudios.education/sc160321/medias/bg-mobile.jpg");
+    background-image: url("./medias/bg-mobile.jpg");
     background-size: cover;
     background-position: top left; } }
 
@@ -422,7 +449,7 @@ nav {
 
 @media only screen and (min-width: 1440px) {
   .section-hero {
-    background-image: url("http://royerstudios.education/sc160321/medias/bg-full.jpg");
+    background-image: url("./medias/bg-full.jpg");
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;

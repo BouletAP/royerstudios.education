@@ -42,7 +42,7 @@
         display:inline-block;
         width:100px;
         height:100px;
-        background-image: url('http://royerstudios.education/sc160321/medias/aytam/animate-your-tobacco-awareness-messages.png');
+        background-image: url('./medias/aytam/animate-your-tobacco-awareness-messages.png');
         background-size: cover;
         &.logo-left{margin-right:15px;}
         &.logo-right{margin-left:15px;}
@@ -125,12 +125,14 @@
             background-color: #41007D2A;
             border: 0px solid black;
             border-bottom:1px;
+            padding:5px;
         }
 
-        input, textarea, label {
-            font-size:1.1em;
+        input, textarea, label {   
+            font-size:1em;
             line-height: 1.5em;
         }
+        label {font-size:1.1em;}
     }
 
 
@@ -141,6 +143,8 @@
 
         font-size: 18px;
         h2 {font-size:1.2em;line-height: 1.2em;margin-bottom:4px;}
+
+        .mobile-hide {display:none;}
     
     }
     
@@ -196,7 +200,7 @@
 
 
 
-.btn-ctw {
+.btn-submit {
       
     font-size:0.9em;
     padding: 5px 20px;
@@ -204,49 +208,24 @@
     outline:0px;
   
     position: relative;
-    background: rgb(222,189,153);
-    background: linear-gradient(0deg, rgba(222,189,153,1) 0%, rgba(157,123,90,1) 100%);
+    background: $color-linkh-primary;
+    background: linear-gradient(0deg, $color-linkh-primary 0%, $color-linkh-primary 100%);
     color:#FFF;
     text-transform:uppercase;
-    border: 1px solid #6A491A;
+    border: 1px solid $color-linkh-primary;
     max-width:250px;
-    
+      
   
   
-    &::before,
-    &::after{
-      content: "";
-      position:absolute;
-      top:0px;
-      left:0px;       
-      //transition: transform 0.5s;
-    }
-  
-    &::before {
-      width: 110%;
-      height: 160%;
-      border-left: 1px solid black;
-      border-right: 1px solid black;
-      transform: translate(-5%, -15%);
-  
-    }
-    &::after {
-      width: 120%;
-      height: 130%;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
-      transform: translate(-8%, -10%) skew(10deg);   
-  
-    }
-  
-  
-    &:hover::after,
-    &:active::after,
-    &:focus::after {
-      transform: translate(-8%, -10%) skew(-10deg); 
+    &:hover,
+    &:active,
+    &:focus {
+      opacity:0.8;
+      cursor: pointer;
     }
   }
   
+
   .btn-ctw.odd {
     &::before {
       width: 110%;
@@ -270,3 +249,38 @@
       transform: translate(-8%, -10%) skew(10deg); 
     }
   }
+
+
+  
+
+.hidden {display:none;}
+
+.alert-message {
+    display:none;
+    font-size:2vw;
+    text-transform: uppercase;
+    margin-bottom:15px;
+}
+.alert-message p:nth-child(2) {text-transform: none;font-weight: bold;}
+.alert-message #error-details {font-weight: normal;text-transform: none;color:#093139;}
+
+.alert-message.show {
+    display:block;
+    padding:12px 20px;
+    border: 1px solid#4F5A28;
+    
+    animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+#success-message {
+    background-color: #88AC2B55;
+    color: #4F5A28;
+}
+#error-message {
+    background-color: #AF020033;
+    color: #A30500;
+}
