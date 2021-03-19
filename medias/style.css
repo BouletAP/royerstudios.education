@@ -3,6 +3,9 @@ html, body, div, ul {
   margin: 0;
   padding: 0; }
 
+.col-full {
+  width: 100%; }
+
 body {
   font-family: "myriad-pro", Helvetica, sans-serif;
   font-size: 22px; }
@@ -13,6 +16,9 @@ h2, .h2, h4, .h4 {
 
 h2, h3, .h2, .h3, p, .p, li {
   color: #41007D; }
+
+.text-center {
+  text-align: center; }
 
 a {
   text-decoration: none;
@@ -135,6 +141,9 @@ nav {
   text-indent: -2.2em;
   padding-left: 2.2em; }
 
+.text-pitch {
+  font-size: 1.2em; }
+
 .section-team .col-title,
 .section-ep .col-title {
   text-align: center; }
@@ -176,7 +185,7 @@ nav {
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-image: url("./medias/aytam/animate-your-tobacco-awareness-messages.png");
+    background-image: url("./medias/aytam/AYTAM-Logo-Final-Stars.png");
     background-size: cover; }
     .page-pdf .logo-bg.logo-left {
       margin-right: 15px; }
@@ -285,6 +294,8 @@ nav {
       position: relative;
       padding: 5px 5px;
       margin-top: 50px; }
+      .page-pdf .col-sidebar .img-flex {
+        display: flex; }
       .page-pdf .col-sidebar::before, .page-pdf .col-sidebar::after {
         content: "";
         position: absolute;
@@ -420,7 +431,9 @@ nav {
   .section-hero {
     background-image: url("./medias/bg-mobile.jpg");
     background-size: cover;
-    background-position: top left; } }
+    background-position: top left; }
+  .section-footer .col-content {
+    text-align: center; } }
 
 @media only screen and (max-width: 399px) {
   nav li a {

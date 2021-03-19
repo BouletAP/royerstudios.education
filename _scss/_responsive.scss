@@ -59,6 +59,8 @@
         background-size: cover;
         background-position: top left;
     }
+
+    .section-footer .col-content {text-align: center;}
 }
 
 @include mq('phone', max) {
