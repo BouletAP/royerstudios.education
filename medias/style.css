@@ -290,6 +290,8 @@ nav {
       width: 40%;
       margin-left: 8%;
       margin-right: 2%; }
+    .page-pdf .img-second {
+      width: 70%; }
     .page-pdf .col-sidebar {
       position: relative;
       padding: 5px 5px;
