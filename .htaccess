@@ -16,3 +16,10 @@
 RewriteEngine On 
 RewriteCond %{HTTPS} off 
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Canonical HTTPS/non-WWW
+<IfModule mod_rewrite.c>
+	RewriteCond %{HTTPS} off [OR]
+	RewriteCond %{HTTP_HOST} ^www\.royerstudios\.education [NC]
+	RewriteRule (.*) https://royerstudios.education/$1 [L,R=301]
+</IfModule>
