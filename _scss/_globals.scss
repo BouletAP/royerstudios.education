@@ -62,10 +62,14 @@ li {
         text-transform: uppercase;
         font-weight: 600;
     }
-    .col-content h2 {
+
+    .col-content h2,
+    .col-content .h2 {
         font-size: 1.7em;
+        font-weight: 600;
         line-height: 1.2em;
         margin-bottom:30px;
+
     }
 }
 

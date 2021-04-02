@@ -66,8 +66,10 @@ li {
     line-height: 1.2em;
     text-transform: uppercase;
     font-weight: 600; }
-  .section .col-content h2 {
+  .section .col-content h2,
+  .section .col-content .h2 {
     font-size: 1.7em;
+    font-weight: 600;
     line-height: 1.2em;
     margin-bottom: 30px; }
 
@@ -150,8 +152,15 @@ nav {
 
 .section-team .m2,
 .section-ep .m2 {
-  margin-top: 10px;
-  margin-bottom: 5px; }
+  margin-top: 22px;
+  margin-bottom: 22px; }
+
+.section-team ul li:first-child,
+.section-ep ul li:first-child {
+  margin-top: 10px; }
+
+.section-ep li p {
+  margin-top: 3px; }
 
 .page-pdf {
   background-color: #000;
@@ -399,7 +408,8 @@ nav {
     padding: 6px 15px; }
   .section .col-title .h2 {
     font-size: 1.5em; }
-  .section .col-content h2 {
+  .section .col-content h2,
+  .section .col-content .h2 {
     font-size: 1.2em;
     line-height: 1.1em;
     margin-top: 5px;
@@ -452,7 +462,8 @@ nav {
     .section .col-title .h2 {
       font-size: 1.4em;
       line-height: 1.2em; }
-    .section .col-content h2 {
+    .section .col-content h2,
+    .section .col-content .h2 {
       font-size: 1.4em;
       line-height: 1.1em;
       margin-bottom: 20px; }
@@ -480,7 +491,8 @@ nav {
   .section .col-title .h2 {
     font-size: 1.8em;
     line-height: 1.2em; }
-  .section .col-content h2 {
+  .section .col-content h2,
+  .section .col-content .h2 {
     font-size: 1.7em;
     line-height: 1.2em;
     margin-bottom: 30px; } }
@@ -489,3 +501,7 @@ nav {
   .section-hero {
     background-size: contain;
     background-position: top left; } }
+
+@media only screen and (min-width: 1248px) {
+  .section-ep .col-content ul {
+    padding-right: 10vw; } }

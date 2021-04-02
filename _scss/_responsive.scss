@@ -20,7 +20,8 @@
     }
 
     .section .col-title .h2 { font-size: 1.5em; }
-    .section .col-content h2 { font-size: 1.2em; line-height: 1.1em; margin-top: 5px; margin-bottom: 10px;}
+    .section .col-content h2,
+    .section .col-content .h2 { font-size: 1.2em; line-height: 1.1em; margin-top: 5px; margin-bottom: 10px;}
     .section-tr .h3 {
         font-size: 1.1em;
         margin-bottom: 10px;
@@ -81,7 +82,8 @@
             font-size: 1.4em;
             line-height: 1.2em;
         }
-        .col-content h2 {
+        .col-content h2,
+        .col-content .h2 {
             font-size: 1.4em;
             line-height: 1.1em;
             margin-bottom:20px;
@@ -120,7 +122,8 @@
             font-size: 1.8em;
             line-height: 1.2em;
         }
-        .col-content h2 {
+        .col-content h2,
+        .col-content .h2 {
             font-size: 1.7em;
             line-height: 1.2em;
             margin-bottom:30px;
@@ -135,4 +138,13 @@
         background-size: contain;
         background-position: top left;
     }    
+}
+
+
+
+@include mq('desktop') {
+    .section-ep .col-content ul {
+        padding-right:10vw;
+    }
+
 }
