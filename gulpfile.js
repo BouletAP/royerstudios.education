@@ -73,6 +73,6 @@ gulp.task('ftp-deploy-watch', function() {
 });
 
 
-gulp.task('watcher', gulp.parallel ('sass', 'bs')); 
+gulp.task('watcher', gulp.parallel ('sass-compiler', 'bs')); 
 
 gulp.task('livewatch', gulp.parallel ('sass', 'sass-compiler')); //, 'ftp-deploy-watch'

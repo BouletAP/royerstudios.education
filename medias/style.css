@@ -437,6 +437,8 @@ nav {
 @media only screen and (max-width: 559px) {
   nav {
     top: 15px; }
+  nav li {
+    line-height: 22px; }
   nav li a {
     font-size: 16px;
     line-height: 16px; }
@@ -449,7 +451,13 @@ nav {
 
 @media only screen and (max-width: 399px) {
   nav li a {
-    font-size: 12px; } }
+    font-size: 12px; }
+  nav li {
+    line-height: 14px; } }
+
+@media only screen and (max-width: 479px) {
+  .section-hero {
+    background-position: top center; } }
 
 @media only screen and (min-width: 768px) {
   .section {

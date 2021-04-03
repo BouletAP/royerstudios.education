@@ -54,6 +54,7 @@
     nav {
         top:15px;
     }
+    nav li {line-height:22px;}    
     nav li a {font-size: 16px; line-height:16px;}    
     .section-hero {
         background-image: url('./medias/bg-mobile.jpg');
@@ -66,6 +67,10 @@
 
 @include mq('phone', max) {
     nav li a {font-size: 12px;}
+    nav li {line-height:14px;} 
+}
+@include mq('phone-wide', max) {
+    .section-hero {background-position: top center;}
 }
 
 
