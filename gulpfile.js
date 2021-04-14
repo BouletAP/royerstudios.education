@@ -75,4 +75,4 @@ gulp.task('ftp-deploy-watch', function() {
 
 gulp.task('watcher', gulp.parallel ('sass-compiler', 'bs')); 
 
-gulp.task('livewatch', gulp.parallel ('sass', 'sass-compiler')); //, 'ftp-deploy-watch'
+gulp.task('livewatch', gulp.parallel ('sass', 'sass-compiler', 'ftp-deploy-watch')); //, 'ftp-deploy-watch'
