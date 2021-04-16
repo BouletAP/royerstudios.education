@@ -1,0 +1,109 @@
+
+.section-hero {
+
+    background-image: url('./medias/hero/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    max-width:none;  
+    margin-top:0px;
+    min-height:90vh;
+    position:relative;
+
+    &:after,
+    &:before {
+        position:absolute;
+        content:"";
+        z-index:1;
+    }
+
+    &:after {
+        bottom:0px;
+        right:5px;
+        background-image: url('./medias/hero/jose.png');
+        background-size: contain;
+        width:30vh;
+        height:30vh;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .welcome-message {
+
+        position:absolute;
+        width:70vw;
+        height:auto;
+        top:30vh;
+        left:15vw;
+        text-align: center;
+        z-index:30;
+
+        img {
+            margin:20px auto;
+            width:98%;
+            max-width:95vw;
+        }
+
+        h1 {
+            overflow:hidden;
+            margin:0px;
+            .welcome {
+                display: inline-block;
+                width:100%;
+                border-top: 0.5px solid #FFFFFFAA;
+                border-bottom: 0.5px solid #FFFFFFAA;
+                text-transform: uppercase;
+                font-size:18px;
+                color: $color-light;
+                font-weight:200;
+                text-align:center;
+                padding:8px
+            }
+            .img {
+                display:none;
+            }
+        }
+        p {
+            color: $color-light;
+            font-size:18px;
+            line-height: 1.1em;
+        }
+    }
+
+    @include mq('tablet') {
+        
+        .welcome-message {
+            width:50vw;
+            top:20vh;
+            left:25vw;
+
+            img {
+                width:78%;
+            }
+
+            h1,p {
+                font-size:1.4em;
+                line-height: 1.3em;
+            }
+            p {margin:0;}
+        }
+    }
+    @include mq('desktop') {
+        
+        .welcome-message {
+            width:40vw;
+            top:20vh;
+            left:30vw;
+
+            img {
+                width:70%;
+            }
+
+            h1,p {
+                font-size:26px;
+                line-height: 30px;
+            }
+        }
+    }
+}

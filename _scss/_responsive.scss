@@ -1,7 +1,4 @@
 
-.welcome-message img {
-    max-width: 88%;
-}
 
 
 @include mq('desktop', max) {
@@ -32,22 +29,6 @@
     }
     
 
-    .welcome-message p br {display: none;}
-
-    .section-hero {
-        background-image: url('./medias/bg-tablet.jpg');
-        background-size: cover;
-        background-position: top left;
-        min-height: 80vh;
-        align-items: end;
-
-        .welcome-message {      
-            padding-top:80px;  
-            padding-bottom:10px;
-
-            img {margin-bottom:1em;}
-        }
-    }
 }
 
 @include mq('phablet', max) {     
@@ -56,11 +37,7 @@
     }
     nav li {line-height:22px;}    
     nav li a {font-size: 16px; line-height:16px;}    
-    .section-hero {
-        background-image: url('./medias/bg-mobile.jpg');
-        background-size: cover;
-        background-position: top left;
-    }
+    
 
     .section-footer .col-content {text-align: center;}
 }
@@ -69,10 +46,6 @@
     nav li a {font-size: 12px;}
     nav li {line-height:14px;} 
 }
-@include mq('phone-wide', max) {
-    .section-hero {background-position: top center;}
-}
-
 
 @include mq('tablet') {
 
@@ -95,30 +68,10 @@
         }
     }
 
-    .section-hero {
-        .welcome-message {
-            font-size: 20px;
-            $a: 5vw;
-            padding-bottom:calc(100px - #{$a});
-            img {width:45vw;}
-        }
-
-    }
 }
 
 @include mq('desktop-wide') {
-    .section-hero {
-        background-image: url('./medias/bg-full.jpg');
-        background-size: cover;
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        min-height: 110vh;
-
-        .welcome-message {
-            font-size: 24px;
-            padding-bottom:100px;
-        }
-    }
+    
 
     .section {
         .col-title {width:23%;margin-right:1%}
@@ -137,13 +90,6 @@
 
 }
 
-
-@media (min-width:768px) and (max-width:1248px ) {
-    .section-hero {
-        background-size: contain;
-        background-position: top left;
-    }    
-}
 
 
 
