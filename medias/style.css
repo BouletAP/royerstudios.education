@@ -104,25 +104,41 @@ nav {
   max-width: none;
   margin-top: 0px;
   min-height: 90vh;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
+  .section-hero nav {
+    z-index: 20; }
   .section-hero:after, .section-hero:before {
     position: absolute;
     content: "";
     z-index: 1; }
+  .section-hero:before {
+    top: -3%;
+    left: -10%;
+    background-image: url("./medias/hero/royerstudios-icon.png");
+    background-size: contain;
+    width: 35vh;
+    height: 35vh;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    opacity: 0.5; }
   .section-hero:after {
-    bottom: 0px;
+    bottom: -5px;
     right: 5px;
     background-image: url("./medias/hero/jose.png");
     background-size: contain;
-    width: 30vh;
-    height: 30vh;
+    width: 40vh;
+    height: 40vh;
     background-position: bottom center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: rotate(10deg); }
   .section-hero .welcome-message {
     position: absolute;
     width: 70vw;
     height: auto;
-    top: 30vh;
+    top: 27vh;
     left: 15vw;
     text-align: center;
     z-index: 30; }
@@ -149,7 +165,8 @@ nav {
     .section-hero .welcome-message p {
       color: #FFF;
       font-size: 18px;
-      line-height: 1.1em; }
+      line-height: 1.1em;
+      margin: 0px; }
   @media only screen and (min-width: 768px) {
     .section-hero .welcome-message {
       width: 50vw;
@@ -161,7 +178,18 @@ nav {
         font-size: 1.4em;
         line-height: 1.3em; }
       .section-hero .welcome-message p {
-        margin: 0; } }
+        margin: 0; }
+      .section-hero .welcome-message .welcome {
+        letter-spacing: 2px; }
+    .section-hero:before {
+      top: 20%;
+      left: -8%;
+      width: 38vw;
+      height: 38vw; }
+    .section-hero:after {
+      transform: none;
+      width: 40vw;
+      height: 40vw; } }
   @media only screen and (min-width: 1248px) {
     .section-hero .welcome-message {
       width: 40vw;
@@ -171,7 +199,20 @@ nav {
         width: 70%; }
       .section-hero .welcome-message h1, .section-hero .welcome-message p {
         font-size: 26px;
-        line-height: 30px; } }
+        line-height: 30px; }
+      .section-hero .welcome-message h1 .welcome {
+        letter-spacing: 3px;
+        font-size: 24px; }
+    .section-hero:before {
+      top: 20%;
+      left: -3%;
+      width: 30vw;
+      height: 30vw; }
+    .section-hero:after {
+      transform: none;
+      width: 35vw;
+      height: 35vw;
+      right: 10%; } }
 
 .section li {
   margin-bottom: 2px; }
@@ -474,7 +515,7 @@ nav {
     line-height: 22px; }
   nav li a {
     font-size: 16px;
-    line-height: 16px; }
+    line-height: 12px; }
   .section-footer .col-content {
     text-align: center; } }
 
@@ -482,7 +523,7 @@ nav {
   nav li a {
     font-size: 12px; }
   nav li {
-    line-height: 14px; } }
+    line-height: 12px; } }
 
 @media only screen and (min-width: 768px) {
   .section {
