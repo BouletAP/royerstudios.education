@@ -77,7 +77,7 @@ $reply = !empty($data['email']) ? $data['email'] : "info@royerstudios.com";
 $to      = 'info@royerstudios.com';
 //$to      = 'bouletap@gmail.com';
 
-$headers = 'From: info@royerstudios.com' . "\r\n" .
+$headers = 'From: info@royerstudios.education' . "\r\n" .
     'Reply-To: ' .$reply. "\r\n" .
     'Bcc: dev@bouletap.com' . "\r\n" .
     'Content-Type: text/html; charset=UTF-8' . "\r\n" .
